@@ -14,8 +14,16 @@ export default function Body() {
 
     const [recipeShown, setRecipeShown] = useState(false)
 
-    function getRecipe() {
-        setRecipeShown(prevShown => !prevShown)
+    // function getRecipe() {
+    //     setRecipeShown(prevShown => !prevShown)
+    // }
+    //This code directly gets hard coded Recipe.jsx
+    
+    function getRecipe(ingrediantList) {
+        // setRecipeShown(prevShown => !prevShown)
+        // Right now recipe is gotting from Recipe.jsx
+        const recipeMarkdown= await getRecipeFromMistral(ingredientList)
+        console.log(recipeMarkdown)
     }
 
 
