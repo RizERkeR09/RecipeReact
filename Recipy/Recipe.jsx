@@ -1,4 +1,4 @@
-export default function Recipe(){
+export default function Recipe(props){ //props including for geting answer of ai
     return(
         <section>
                 <h1>Here is your recipe</h1>
@@ -9,6 +9,8 @@ export default function Recipe(){
                     placeat enim nobis fugiat dignissimos sed, obcaecati eaque minima magni <br />
                     ullam ratione, hic pariatur? Repellat, reiciendis. Aliquid explicabo veritatis <br />
                     nulla asperiores illo.</p>
+{/*             {props.recipe} */}
+            //for getting recipe from ai
             </section>
     )
 }
