@@ -12,16 +12,14 @@ export default function Body() {
         <li key={item}>{item}</li>
     ))
 
-    const [recipeShown, setRecipeShown] = useState(false)
+    const [recipe, setRecipe] = useState("")
 
-    // function getRecipe() {
-    //     setRecipeShown(prevShown => !prevShown)
-    // }
-    //This code directly gets hard coded Recipe.jsx
-    
     async function getRecipe() {
-        const recipeMarkdown= await getRecipeFromMistral(ingredientList)
-        console.log(recipeMarkdown)
+        // setRecipe(prevShown => !prevShown)
+        // Right now recipe is gotting from Recipe.jsx
+        const recipeMarkdown = await getRecipeFromMistral(ingredientList)
+        setRecipe(recipeMarkdown)
+        //we should have gotten same result after getting strings from ai but button is not working.
     }
 
 
@@ -50,7 +48,7 @@ export default function Body() {
             ingredient={ingredient}
             getRecipe= {getRecipe}
             />}
-            {recipeShown && <Recipe />}
+            {recipe && <Recipe />}
         </main>
     )
 }
