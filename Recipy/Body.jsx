@@ -19,9 +19,7 @@ export default function Body() {
     // }
     //This code directly gets hard coded Recipe.jsx
     
-    function getRecipe(ingrediantList) {
-        // setRecipeShown(prevShown => !prevShown)
-        // Right now recipe is gotting from Recipe.jsx
+    function getRecipe() {
         const recipeMarkdown= await getRecipeFromMistral(ingredientList)
         console.log(recipeMarkdown)
     }
