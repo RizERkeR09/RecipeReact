@@ -48,7 +48,9 @@ export default function Body() {
             ingredient={ingredient}
             getRecipe= {getRecipe}
             />}
-            {recipe && <Recipe />}
+            {recipe && <Recipe 
+             recipe ={recipe}           // this line is included to get props of recipe from ai.   
+                           />}
         </main>
     )
 }
