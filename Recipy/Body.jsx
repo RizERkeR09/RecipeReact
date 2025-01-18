@@ -19,7 +19,7 @@ export default function Body() {
     // }
     //This code directly gets hard coded Recipe.jsx
     
-    function getRecipe() {
+    async function getRecipe() {
         const recipeMarkdown= await getRecipeFromMistral(ingredientList)
         console.log(recipeMarkdown)
     }
