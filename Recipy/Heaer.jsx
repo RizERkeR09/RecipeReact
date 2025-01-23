@@ -1,7 +1,6 @@
 
 
 export default function Head(prop){
-    console.log(prop)
     return(
         <header>
             <nav>
